@@ -11,14 +11,10 @@ def main():
     ## display our Python data (a list containing two dictionaries)
     print(hitchhikers)
 
-    ## open a new file in write mode
-    zfile = open("galaxyguide.json", "w")
+    ## Create the JSON string
+    jsonstring = json.dumps(hitchhikers)
 
-    ## use the JSON library
-    ## USAGE: json.dump(input data, file like object) ##
-    json.dump(hitchhikers, zfile)
-
-    ## close the file when we are done
-    zfile.close()
+    ## Display a single string of JSON
+    print(jsonstring)
 
 main()
