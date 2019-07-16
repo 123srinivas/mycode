@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+"""Alta3 Research | Author: RZFeeser@alta3.com"""
+
+LOOKUPAPI = 'http://www.airnowapi.org/aq/forecast/zipCode/?format=application/json&zipCode=17042&date=2019-01-21&distance=25&API_KEY=839150C8-D92E-41D2-A38D-5E063AD90BB6'
+
+# imports always go at the top of your code
+import requests
+
+def main():
+    """Run time code"""
+    # create r, which is our request object
+    r = requests.get(LOOKUPAPI)
+
+    # display the JSON we were returned as Pythonic datastructures
+    print(r.json())
+
+main()
